@@ -14,7 +14,6 @@ let favorites = {};
 
 const createDOMNodes = page => {
     const currentArray = page === 'results' ? resultsArray : Object.values(favorites);
-    console.log('Current Array', page, currentArray);
     
     currentArray.forEach(result => {
 
@@ -96,7 +95,7 @@ const getNasaPictures = async () => {
     try {
         const response = await fetch(apiUrl);
         resultsArray = await response.json();
-        updateDOM('favorites');
+        updateDOM('results');
     } catch (error) {
         // Catch Error Here
     }
