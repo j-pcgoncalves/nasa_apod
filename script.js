@@ -120,5 +120,16 @@ const saveFavorite = itemUrl => {
     })
 }
 
+// Remove item from favorites
+const removeFavorite = itemUrl => {
+    if (favorites[itemUrl]) {
+        delete favorites[itemUrl];
+
+        // Set Favorites in localStorage
+        localStorage.setItem('nasaFavorites', JSON.stringify(favorites));
+        updateDOM('favorites');
+    }
+}
+
 // On Load
 //getNasaPictures();
