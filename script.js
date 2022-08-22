@@ -13,6 +13,7 @@ let resultsArray = [];
 let favorites = {};
 
 const showContent = () => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
     loader.classList.add('hidden');
 }
 
