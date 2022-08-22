@@ -151,4 +151,4 @@ const removeFavorite = itemUrl => {
 }
 
 // On Load
-//getNasaPictures();
+getNasaPictures();
