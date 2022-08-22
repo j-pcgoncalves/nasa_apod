@@ -87,6 +87,7 @@ const updateDOM = page => {
         favorites = JSON.parse(localStorage.getItem('nasaFavorites'));
     }
 
+    imagesContainer.textContent = '';
     createDOMNodes(page);
 }
 
